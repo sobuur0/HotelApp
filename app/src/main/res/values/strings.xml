@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Hotel Reservation</string>
     <string name="welcome_text">Welcome To Your Favourite Hotel! Do Have A Wonderful Stay</string>
+    <string name="signUp_here">SignUp Here</string>
+    <string name="last_name">Last Name</string>
 </resources>
