@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class WelcomeScreen extends AppCompatActivity {
 
     private ImageView logo;
-    private static int splashTimeOut = 8000;
+    private static int splashTimeOut = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +22,6 @@ public class WelcomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_screen);
 
         TextView textView = findViewById(R.id.textView);
-        //String text = "<font color = #FF2513>HOTEL</font> <font color = #FF17A7>RESERVATION</font>";
-        //textView.setText(Html.fromHtml(text));
-
         logo= findViewById(R.id.imageLogo);
 
         new Handler().postDelayed(new Runnable() {

@@ -34,6 +34,13 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogSignUp dialogSignUp = new DialogSignUp();
+                dialogSignUp.show(getSupportFragmentManager(), "123");
+            }
+        });
 
     }
 }
