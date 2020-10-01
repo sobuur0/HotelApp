@@ -7,5 +7,6 @@
     <color name="backgroundColor">#1E140F</color>
     <color name="colorGrey">#323131</color>
     <color name="colorWhite">#F4FFEC</color>
-    <color name="colorBlue">#2113FF</color>
+    <color name="colorBlue">#397EC1</color>
+    <color name="colorGreen">#38FF12</color>
 </resources>

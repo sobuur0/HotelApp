@@ -12,6 +12,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class SignInActivity extends AppCompatActivity {
+    private CharSequence user_mail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +26,14 @@ public class SignInActivity extends AppCompatActivity {
         Button btnSignUp = findViewById(R.id.btn_sign_up);
         Button btnSignIn = findViewById(R.id.btn_sign_in);
 
+        user_mail =  textMail.getText();
+
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //I want to go to the the main page
                 Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                intent.putExtra("USER_MAIL", user_mail);
                 startActivity(intent);
             }
         });
@@ -39,6 +43,7 @@ public class SignInActivity extends AppCompatActivity {
             public void onClick(View v) {
                 DialogSignUp dialogSignUp = new DialogSignUp();
                 dialogSignUp.show(getSupportFragmentManager(), "123");
+
             }
         });
 
