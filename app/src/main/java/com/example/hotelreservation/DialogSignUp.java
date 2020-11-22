@@ -17,6 +17,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
 public class DialogSignUp extends AppCompatActivity {
 
     Animation mAnimFast;
@@ -78,9 +81,9 @@ public class DialogSignUp extends AppCompatActivity {
     }
 
     private boolean validateEmail() {
-        EditText email = findViewById(R.id.edtEmail);
+        TextInputLayout email = findViewById(R.id.edtEmail);
         String getEmail = email.toString();
-        if(email.getText().toString().trim().isEmpty()){
+        if(email.getEditText().toString().trim().isEmpty()){
             email.setError("Email field cannot be Empty");
             return false;
         }else if (!Patterns.EMAIL_ADDRESS.matcher(getEmail).matches()){
