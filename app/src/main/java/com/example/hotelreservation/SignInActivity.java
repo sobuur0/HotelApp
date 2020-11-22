@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
+import com.google.firebase.auth.ActionCodeSettings;
+
 import org.w3c.dom.Text;
 
 public class SignInActivity extends AppCompatActivity {
@@ -41,8 +43,8 @@ public class SignInActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogSignUp dialogSignUp = new DialogSignUp();
-                dialogSignUp.show(getSupportFragmentManager(), "123");
+                Intent intent = new Intent(SignInActivity.this, DialogSignUp.class);
+                startActivity(intent);
 
             }
         });

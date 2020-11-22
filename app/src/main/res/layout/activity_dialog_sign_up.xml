@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edtEmail"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -91,7 +91,7 @@
         android:textSize="15sp"
         android:text="PassWord"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
     <EditText
         android:id="@+id/editText4"
