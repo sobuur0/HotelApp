@@ -17,9 +17,4 @@
         <item name="boxCornerRadiusTopEnd">26dp</item>
     </style>
 
-    <style name="AllButtons" parent="Widget.MaterialComponents.ExtendedFloatingActionButton.Icon">
-        <item name="boxBackgroundColor">@color/colorBlue</item>
-        <item name="boxCornerRadiusTopEnd">24dp</item>
-    </style>
-
 </resources>
