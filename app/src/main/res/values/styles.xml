@@ -15,6 +15,7 @@
         <item name="boxCornerRadiusBottomStart">26dp</item>
         <item name="boxCornerRadiusTopStart">26dp</item>
         <item name="boxCornerRadiusTopEnd">26dp</item>
+        <item name="boxStrokeColor">@color/colorBlack</item>
     </style>
 
 </resources>
