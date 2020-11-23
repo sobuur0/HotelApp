@@ -1,33 +1,32 @@
 package com.example.hotelreservation;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Intent;
-import android.media.SoundPool;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.util.Patterns;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.Objects;
 
 public class DialogSignUp extends AppCompatActivity {
 
     Animation mAnimFast;
-    int midBeep = -1;
-    SoundPool mSp;
+//    int midBeep = -1;
+//    SoundPool mSp;
 
     @Override
-   protected void onCreate(Bundle savedInstanceState) {
+   protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog_sign_up);
 
@@ -63,7 +62,7 @@ public class DialogSignUp extends AppCompatActivity {
         mAnimFast = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fash_test);
         mAnimFast.setDuration(1000);
 
-        TextView signUp = findViewById(R.id.sinUp);
+        final TextView signUp = findViewById(R.id.sinUp);
         signUp.setAnimation(mAnimFast);
 
         Button nextScreen = findViewById(R.id.btnSigned_up);
@@ -71,13 +70,12 @@ public class DialogSignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (validateEmail()) {
-                    Intent intent = new Intent(DialogSignUp.this, MainActivity.class);//
+                    Intent intent = new Intent(DialogSignUp.this, MainActivity.class);
                     startActivity(intent);
+                    return;
                 }
             }
         });
-
-
     }
 
     private boolean validateEmail() {
@@ -86,14 +84,15 @@ public class DialogSignUp extends AppCompatActivity {
         if(email.getEditText().toString().trim().isEmpty()){
             email.setError("Email field cannot be Empty");
             return false;
-        }else if (!Patterns.EMAIL_ADDRESS.matcher(getEmail).matches()){
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(getEmail).matches()){
             email.setError("Email address is Invalid");
             return false;
-        }else {
+        } else {
+            email.setError(null);
+            email.isErrorEnabled();
             return true;
         }
-
-   }
+    }
 
 
 }
