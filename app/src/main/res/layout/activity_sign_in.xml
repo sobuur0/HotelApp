@@ -61,13 +61,15 @@ android:background="@drawable/bcksignup">
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="172dp"
                 android:layout_marginBottom="18dp"
-                android:text="SignUp"
+                android:text="Sign Up"
+                android:textAllCaps="false"
                 android:textStyle="italic"
+                android:backgroundTint="@color/colorBlack"
+                app:cornerRadius="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewQuestion"
-                android:background="@drawable/circular_drawable1"/>
+                app:layout_constraintTop_toBottomOf="@+id/textViewQuestion" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/textView4"
@@ -167,12 +169,14 @@ android:background="@drawable/bcksignup">
                 android:layout_marginStart="161dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="162dp"
-                android:text="SignIn"
+                android:text="Login"
+                android:textAllCaps="false"
                 android:textStyle="italic"
+                android:backgroundTint="@color/colorBlack"
+                app:cornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textPassword"
-                android:background="@drawable/circular_drawable1"/>
+                app:layout_constraintTop_toBottomOf="@+id/textPassword" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
