@@ -27,7 +27,7 @@ android:background="@drawable/bcksignup">
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="80dp"
                 android:layout_marginEnd="8dp"
-                android:text="HotelReservation"
+                android:text="Hotel Reservation"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/colorBlack"
@@ -38,7 +38,7 @@ android:background="@drawable/bcksignup">
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/textViewWelcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,7 +53,7 @@ android:background="@drawable/bcksignup">
                 app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
 
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_sign_up"
                 android:layout_width="186dp"
                 android:layout_height="60dp"
@@ -62,14 +62,14 @@ android:background="@drawable/bcksignup">
                 android:layout_marginEnd="172dp"
                 android:layout_marginBottom="18dp"
                 android:text="SignUp"
-                android:textStyle="bold"
+                android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewQuestion"
                 android:background="@drawable/circular_drawable1"/>
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,12 +101,12 @@ android:background="@drawable/bcksignup">
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:inputType="textEmailAddress"
-                    android:textAlignment="center">
+                    android:textAlignment="viewStart">
                 </com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -120,20 +120,27 @@ android:background="@drawable/bcksignup">
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textMail" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/AllTextInputs"
                 android:id="@+id/textPassword"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@drawable/circular_drawable1"
                 android:inputType="textPassword"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorWhite"
                 android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <TextView
@@ -153,7 +160,7 @@ android:background="@drawable/bcksignup">
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_sign_in"
                 android:layout_width="186dp"
                 android:layout_height="60dp"
@@ -161,7 +168,7 @@ android:background="@drawable/bcksignup">
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="162dp"
                 android:text="SignIn"
-                android:textStyle="bold"
+                android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textPassword"
