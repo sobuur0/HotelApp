@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.ActionCodeSettings;
+
 import org.w3c.dom.Text;
 
 public class SignInActivity extends AppCompatActivity {
@@ -21,12 +25,12 @@ public class SignInActivity extends AppCompatActivity {
 
         TextView materialTextView = findViewById(R.id.materialTextView);
         TextView textViewWelcome = findViewById(R.id.textViewWelcome);
-        TextView textMail = findViewById(R.id.textMail);
-        TextView textPassword = findViewById(R.id.textPassword);
+        TextInputLayout textMail = findViewById(R.id.textMail);
+        TextInputLayout textPassword = findViewById(R.id.textPassword);
         Button btnSignUp = findViewById(R.id.btn_sign_up);
         Button btnSignIn = findViewById(R.id.btn_sign_in);
 
-        user_mail =  textMail.getText();
+        user_mail =  textMail.getEditText().getText();
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,8 +45,8 @@ public class SignInActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogSignUp dialogSignUp = new DialogSignUp();
-                dialogSignUp.show(getSupportFragmentManager(), "123");
+                Intent intent = new Intent(SignInActivity.this, DialogSignUp.class);
+                startActivity(intent);
 
             }
         });

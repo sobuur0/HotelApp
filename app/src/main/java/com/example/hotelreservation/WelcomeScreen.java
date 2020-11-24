@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class WelcomeScreen extends AppCompatActivity {
 
     private ImageView logo;
-    private static int splashTimeOut = 2000;
+    private static int splashTimeOut = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
