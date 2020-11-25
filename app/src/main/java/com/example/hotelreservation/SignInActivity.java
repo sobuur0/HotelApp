@@ -24,7 +24,6 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         TextView materialTextView = findViewById(R.id.materialTextView);
-        TextView textViewWelcome = findViewById(R.id.textViewWelcome);
         TextInputLayout textMail = findViewById(R.id.textMail);
         TextInputLayout textPassword = findViewById(R.id.textPassword);
         Button btnSignUp = findViewById(R.id.btn_sign_up);
