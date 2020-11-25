@@ -27,7 +27,7 @@ android:background="@color/colorGrey">
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="8dp"
-                android:text="Hotel Reservation"
+                android:text="Hotel SignIn"
                 android:textAllCaps="false"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -38,20 +38,6 @@ android:background="@color/colorGrey">
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textViewWelcome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="8dp"
-                android:text="@string/welcome_text"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
 
 
             <com.google.android.material.button.MaterialButton
@@ -64,6 +50,7 @@ android:background="@color/colorGrey">
                 android:layout_marginBottom="18dp"
                 android:text="Sign Up"
                 android:textAllCaps="false"
+                android:textColor="@color/colorBlue"
                 android:textStyle="italic"
                 android:backgroundTint="@color/colorBlack"
                 app:cornerRadius="24dp"
@@ -72,38 +59,28 @@ android:background="@color/colorGrey">
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewQuestion" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="72dp"
-                android:text="Email"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewWelcome" />
-
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/AllTextInputs"
                 android:id="@+id/textMail"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="70dp"
                 android:layout_marginEnd="24dp"
                 android:textColor="@color/colorWhite"
                 android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4">
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:inputType="textEmailAddress"
+                    android:hint="Email"
                     android:textAlignment="viewStart">
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -118,6 +95,7 @@ android:background="@color/colorGrey">
                 android:layout_marginEnd="8dp"
                 android:padding="5dp"
                 android:text="PassWord"
+                android:textColor="@color/colorBlue"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -126,21 +104,24 @@ android:background="@color/colorGrey">
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/AllTextInputs"
                 android:id="@+id/textPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="24dp"
                 android:inputType="textPassword"
                 android:textColor="@color/colorWhite"
                 android:textSize="21sp"
+                android:hint="Password"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+                app:layout_constraintTop_toBottomOf="@+id/textMail">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -157,7 +138,7 @@ android:background="@color/colorGrey">
                 android:text="Not Yet A User? "
                 android:textAlignment="center"
                 android:textSize="18sp"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorBlue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -168,11 +149,12 @@ android:background="@color/colorGrey">
                 android:layout_width="186dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="161dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="162dp"
                 android:text="Login"
                 android:textAllCaps="false"
                 android:textStyle="italic"
+                android:textColor="@color/colorBlue"
                 android:backgroundTint="@color/colorBlack"
                 app:cornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
