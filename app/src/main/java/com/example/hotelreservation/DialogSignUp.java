@@ -16,13 +16,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
+
 
 import com.example.hotelreservation.databinding.ActivityDialogSignUpBinding;
 import com.google.android.material.textfield.TextInputLayout;
-
-import java.util.Objects;
 
 public class DialogSignUp extends AppCompatActivity {
 
@@ -38,11 +35,9 @@ public class DialogSignUp extends AppCompatActivity {
 
         mAnimFast = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fash_test);
         mAnimFast.setDuration(1000);
-
         binding.sinUp.setAnimation(mAnimFast);
 
-        Button nextScreen = findViewById(R.id.btnSigned_up);
-        nextScreen.setOnClickListener(new View.OnClickListener() {
+        binding.btnSignedUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (validateEmail()) {
@@ -55,17 +50,16 @@ public class DialogSignUp extends AppCompatActivity {
     }
 
     private boolean validateEmail() {
-        TextInputLayout email = findViewById(R.id.edtEmail);
-        String getEmail = email.toString();
-        if(email.getEditText().toString().trim().isEmpty()){
-            email.setError("Email field cannot be Empty");
+        //TextInputLayout email = findViewById(R.id.edtEmail);
+        if(binding.edtEmail.getEditText().toString().trim().isEmpty()){
+            binding.edtEmail.setError("Email field cannot be Empty");
             return false;
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(getEmail).matches()){
-            email.setError("Email address is Invalid");
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(binding.edtEmail.getEditText().toString()).matches()){
+            binding.edtEmail.setError("Email address is Invalid");
             return false;
         } else {
-            email.setError(null);
-            email.isErrorEnabled();
+            binding.edtEmail.setError(null);
+            binding.edtEmail.isErrorEnabled();
             return true;
         }
     }
