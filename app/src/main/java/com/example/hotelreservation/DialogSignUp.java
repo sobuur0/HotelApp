@@ -1,25 +1,16 @@
 package com.example.hotelreservation;
 
-import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.example.hotelreservation.databinding.ActivityDialogSignUpBinding;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class DialogSignUp extends AppCompatActivity {
 
@@ -50,7 +41,6 @@ public class DialogSignUp extends AppCompatActivity {
     }
 
     private boolean validateEmail() {
-        //TextInputLayout email = findViewById(R.id.edtEmail);
         if(binding.edtEmail.getEditText().toString().trim().isEmpty()){
             binding.edtEmail.setError("Email field cannot be Empty");
             return false;
