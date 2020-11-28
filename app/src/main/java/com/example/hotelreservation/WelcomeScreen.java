@@ -6,23 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.hotelreservation.databinding.ActivityWelcomeScreenBinding;
+
 public class WelcomeScreen extends AppCompatActivity {
 
-    private ImageView logo;
     private static int splashTimeOut = 1000;
+    private ActivityWelcomeScreenBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome_screen);
+        binding = ActivityWelcomeScreenBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
 
-        TextView textView = findViewById(R.id.textView);
-        logo= findViewById(R.id.imageLogo);
+        binding.textView.getText().toString();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -34,6 +38,6 @@ public class WelcomeScreen extends AppCompatActivity {
         },splashTimeOut);
 
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.mysplashanimation);
-        logo.startAnimation(myanim);
+        binding.imageLogo.startAnimation(myanim);
     }
 }

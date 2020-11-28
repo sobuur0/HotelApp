@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
+import com.example.hotelreservation.databinding.ActivitySignInBinding;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.ActionCodeSettings;
@@ -17,31 +18,27 @@ import org.w3c.dom.Text;
 
 public class SignInActivity extends AppCompatActivity {
     private CharSequence user_mail;
+    private ActivitySignInBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        binding = ActivitySignInBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
 
-        TextView materialTextView = findViewById(R.id.materialTextView);
-        TextInputLayout textMail = findViewById(R.id.textMail);
-        TextInputLayout textPassword = findViewById(R.id.textPassword);
-        Button btnSignUp = findViewById(R.id.btn_sign_up);
-        Button btnSignIn = findViewById(R.id.btn_sign_in);
+        binding.textMail.getEditText().getText();
 
-        user_mail =  textMail.getEditText().getText();
-
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
+        binding.btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //I want to go to the the main page
                 Intent intent = new Intent(SignInActivity.this, MainActivity.class);
-                intent.putExtra("USER_MAIL", user_mail);
                 startActivity(intent);
             }
         });
 
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
+        binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignInActivity.this, DialogSignUp.class);
