@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.media.MediaPlayer;
 import android.os.Bundle;
-
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,20 +18,20 @@ public class MainActivity extends AppCompatActivity {
 //
 //        Log.i("infooooooooooooo", "My mail is " + user_mail );
 
-        MediaPlayer mp = new MediaPlayer();
-        try {
-            mp.setDataSource("do.mp3");
-            mp.prepare();
-            mp.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        MediaPlayer mp = new MediaPlayer();
+//        try {
+//            mp.setDataSource("do.mp3");
+//            mp.prepare();
+//            mp.start();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment frag = fragmentManager.findFragmentById(R.id.FragmentsHolder);
 
         if (frag == null) {
-            frag = new HotelListFragment();
+            frag = new HotelListActivity();
             fragmentManager.beginTransaction()
                     .add(R.id.FragmentsHolder, frag)
                     .commit();
