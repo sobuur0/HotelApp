@@ -33,7 +33,7 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //I want to go to the the main page
-                Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                Intent intent = new Intent(SignInActivity.this, HotelListActivity.class);
                 startActivity(intent);
             }
         });
