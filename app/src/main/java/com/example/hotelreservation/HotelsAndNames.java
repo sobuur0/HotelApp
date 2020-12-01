@@ -3,27 +3,27 @@ package com.example.hotelreservation;
 import android.widget.ImageView;
 
 public class HotelsAndNames {
-    private ImageView mHotelPic;
-    private String mHotelName;
+    private int mHotelPic;
+    private int mHotelName;
 
-    public HotelsAndNames(ImageView hotelPic, String hotelName) {
+    public HotelsAndNames(int hotelPic, int hotelName) {
         this.mHotelName = hotelName;
         this.mHotelPic = hotelPic;
     }
 
-    public ImageView getHotelPic() {
+    public int getHotelPic() {
         return mHotelPic;
     }
 
-    public void setHotelPic(ImageView hotelPic) {
+    public void setHotelPic(int hotelPic) {
         mHotelPic = hotelPic;
     }
 
-    public String getHotelName() {
+    public int getHotelName() {
         return mHotelName;
     }
 
-    public void setHotelName(String hotelName) {
+    public void setHotelName(int hotelName) {
         mHotelName = hotelName;
     }
 }
