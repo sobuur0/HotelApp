@@ -2,22 +2,20 @@ package com.example.hotelreservation;
 
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class HotelListActivity extends Fragment {
+import com.example.hotelreservation.databinding.ActivityHotelListBinding;
+
+public class HotelListActivity extends AppCompatActivity {
+
+    ActivityHotelListBinding binding;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = new ActivityHotelListBinding();
+        setContentView(binding.getRoot());
     }
 
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_hotel_list, container, false);
-        return view;
-    }
 }
