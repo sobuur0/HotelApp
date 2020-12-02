@@ -32,8 +32,8 @@ public class SignInActivity extends AppCompatActivity {
         binding.btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //I want to go to the the main page
-                Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                //I want to go to the the HotelList page
+                Intent intent = new Intent(SignInActivity.this, HotelListActivity.class);
                 startActivity(intent);
             }
         });
