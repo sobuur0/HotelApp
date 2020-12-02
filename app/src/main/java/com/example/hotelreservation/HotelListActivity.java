@@ -23,7 +23,9 @@ public class HotelListActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         int myName = mHotelsAndNames[currentIndex].getHotelName();
+        int myHotel = mHotelsAndNames[currentIndex].getHotelPic();
         binding.txtHotelName.setText(myName);
+        binding.imgHotelPic.setImageResource(myHotel);
     }
 
 
