@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DialogSignUp"
+            android:name=".SignUpActivity"
             tools:ignore="Instantiatable" />
         <activity android:name=".WelcomeScreen">
             <intent-filter>
