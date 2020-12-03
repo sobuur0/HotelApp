@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hotelreservation.databinding.ActivityDialogSignUpBinding;
 
-public class DialogSignUp extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     Animation mAnimFast;
     private ActivityDialogSignUpBinding binding;
@@ -32,7 +32,7 @@ public class DialogSignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (validateEmail()) {
-                    Intent intent = new Intent(DialogSignUp.this, MainActivity.class);
+                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                     startActivity(intent);
                     return;
                 }
