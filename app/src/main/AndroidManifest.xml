@@ -24,7 +24,6 @@
         <activity android:name=".SignInActivity" />
         <activity android:name=".HotelListActivity"/>
         <activity android:name=".MainActivity" />
-        <activity android:name=".CardUtil"/>
     </application>
 
 </manifest>
