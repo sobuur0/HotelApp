@@ -12,8 +12,8 @@ public class HotelListActivity extends AppCompatActivity {
     private ActivityHotelListBinding binding;
     int currentIndex = 0;
     HotelsAndNames[] mHotelsAndNames = new HotelsAndNames[] {
-        new HotelsAndNames(R.drawable.bcksignup, R.string.hotel_1),
-            new HotelsAndNames(R.drawable.amex, R.string.last_name)
+        new HotelsAndNames(R.drawable.bcksignup, R.string.hotel_1, R.string.hotel_description_1),
+            new HotelsAndNames(R.drawable.amex, R.string.hotel_2, R.string.hotel_description_2)
     };
 
     @Override

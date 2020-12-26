@@ -5,4 +5,8 @@
     <string name="last_name">Last Name</string>
 
     <string name="hotel_1">Sunshine Hotel</string>
+    <string name="hotel_description_1">This hoetel is a very good hotel and provides a very serene environment.</string>
+
+    <string name="hotel_2">Magville Hotel</string>
+    <string name="hotel_description_2">Omooooooo Na this place sweet to ball pass oo</string>
 </resources>
