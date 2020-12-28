@@ -2,8 +2,6 @@ package com.example.hotelreservation;
 
 
 import android.os.Bundle;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.hotelreservation.databinding.ActivityHotelListBinding;
 
@@ -25,9 +23,9 @@ public class HotelListActivity extends AppCompatActivity {
         int myName = mHotelsAndNames[currentIndex].getHotelName();
         int myHotel = mHotelsAndNames[currentIndex].getHotelPic();
         int myDescription = mHotelsAndNames[currentIndex].getHotelDescription();
-        binding.txtHotelDescription.setText(myDescription);
-        binding.txtHotelName.setText(myName);
-        binding.imgHotelPic.setImageResource(myHotel);
+//        binding.txtHotelDescription.setText(myDescription);
+//        binding.txtHotelName.setText(myName);
+//        binding.imgHotelPic.setImageResource(myHotel);
     }
 
 
