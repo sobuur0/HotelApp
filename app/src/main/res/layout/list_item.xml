@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_title"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imgHotelPic"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        tools:srcCompat="@drawable/splashscreen" />
+
+    <TextView
+        android:id="@+id/txtHotelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Hotel"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/txtHotelDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description" />
+
+</LinearLayout>
