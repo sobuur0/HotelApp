@@ -4,14 +4,17 @@ import android.widget.ImageView;
 
 public class HotelsAndNames {
     private int mHotelPic;
-    private int mHotelName;
-    private int mHotelDescription;
+    private String mHotelName;
+    private String mHotelDescription;
 
-    public HotelsAndNames(int hotelPic, int hotelName, int hotelDescription) {
+    public HotelsAndNames(int hotelPic, String hotelName, String hotelDescription) {
         this.mHotelName = hotelName;
         this.mHotelPic = hotelPic;
         this.mHotelDescription = hotelDescription;
     }
+
+    public HotelsAndNames() {}
+
 
     public int getHotelPic() {
         return mHotelPic;
@@ -21,19 +24,19 @@ public class HotelsAndNames {
         mHotelPic = hotelPic;
     }
 
-    public int getHotelName() {
+    public String getHotelName() {
         return mHotelName;
     }
 
-    public void setHotelName(int hotelName) {
+    public void setHotelName(String hotelName) {
         mHotelName = hotelName;
     }
 
-    public int getHotelDescription() {
+    public String getHotelDescription() {
         return mHotelDescription;
     }
 
-    public void setHotelDescription(int hotelDescription) {
+    public void setHotelDescription(String hotelDescription) {
         mHotelDescription = hotelDescription;
     }
 }
