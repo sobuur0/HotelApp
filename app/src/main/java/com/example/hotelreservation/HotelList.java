@@ -23,7 +23,9 @@ public class HotelList {
             HotelsAndNames hotelsAndNames = new HotelsAndNames();
             hotelsAndNames.setHotelName("Hotel No#" + i);
             hotelsAndNames.setHotelPic(R.drawable.bcksignup);
-            hotelsAndNames.setHotelDescription("");
+            hotelsAndNames.setHotelDescription("This is the description for hotel %d" + i);
+
+            mHotelsAndNames.add(hotelsAndNames);
         }
     }
 
