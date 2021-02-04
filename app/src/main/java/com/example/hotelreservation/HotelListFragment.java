@@ -23,4 +23,10 @@ public class HotelListFragment extends Fragment {
 
         return view;
     }
+
+    private class HotelHolder extends RecyclerView.ViewHolder {
+        public HotelHolder(LayoutInflater inflater, ViewGroup parent) {
+            super(inflater.inflate(R.layout.list_item, parent, false));
+        }
+    }
 }
